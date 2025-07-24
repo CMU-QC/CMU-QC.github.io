@@ -1,0 +1,107 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started with Quantum Computing",
+    "subCategories": [
+      {
+        "id": "intro-tools",
+        "title": null,
+        "resources": [
+          {
+            "id": "qiskit-textbook",
+            "name": "Qiskit Textbook",
+            "link": "https://qiskit.org/textbook/",
+            "description": "Comprehensive introduction to quantum computing with Qiskit.",
+            "icon": "fas fa-book-open"
+          },
+          {
+            "id": "ibm-composer",
+            "name": "IBM Quantum Composer",
+            "link": "https://quantum-computing.ibm.com/composer/",
+            "description": "Hands-on quantum circuit building and simulation.",
+            "icon": "fas fa-laptop-code"
+          },
+          {
+            "id": "microsoft-qdk",
+            "name": "Microsoft Quantum Development Kit (QDK)",
+            "link": "https://www.microsoft.com/en-us/quantum/development-kit",
+            "description": "Learn Q# and quantum algorithms with Microsoft's tools.",
+            "icon": "fas fa-code"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "key-concepts",
+    "title": "Key Concepts & Theory",
+    "subCategories": [
+      {
+        "id": "qm-fundamentals",
+        "title": "Quantum Mechanics Fundamentals",
+        "resources": [
+          {
+            "id": "superposition",
+            "name": "Introduction to Superposition",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-atom"
+          },
+          {
+            "id": "entanglement",
+            "name": "Understanding Entanglement",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-infinity"
+          }
+        ]
+      },
+      {
+        "id": "quantum-algorithms",
+        "title": "Quantum Algorithms",
+        "resources": [
+          {
+            "id": "shors-algorithm",
+            "name": "Shor's Algorithm Explained",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-calculator"
+          },
+          {
+            "id": "grovers-algorithm",
+            "name": "Grover's Algorithm Tutorial",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-search"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "advanced-topics",
+    "title": "Advanced Topics",
+    "subCategories": [
+      {
+        "id": "advanced-resources",
+        "title": null,
+        "resources": [
+          {
+            "id": "error-correction",
+            "name": "Quantum Error Correction",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-shield-alt"
+          },
+          {
+            "id": "qml-architectures",
+            "name": "Quantum Machine Learning Architectures",
+            "link": "#",
+            "description": "(Link Coming Soon)",
+            "icon": "fas fa-brain"
+          }
+        ]
+      }
+    ]
+  }
+]

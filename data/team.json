@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Alice Quantum",
+    "major": "Quantum Physics",
+    "role": "Faculty Advisor",
+    "bio": "Specializes in quantum algorithms and cryptography, guiding our research endeavors and fostering academic excellence.",
+    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Alice+Quantum",
+    "linkedin": "#"
+  },
+  {
+    "id": 2,
+    "name": "Bob Qubit",
+    "major": "Computer Science",
+    "role": "President",
+    "bio": "Passionate about quantum machine learning and fostering a vibrant community within the club. Drives strategic initiatives.",
+    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Bob+Qubit",
+    "linkedin": "#"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Entangle",
+    "major": "Electrical Engineering",
+    "role": "Research Lead",
+    "bio": "Leads our initiatives in quantum error correction and experimental quantum systems, pushing theoretical boundaries.",
+    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Charlie+Entangle",
+    "linkedin": "#"
+  },
+  {
+    "id": 4,
+    "name": "Dana Decoherence",
+    "major": "Applied Mathematics",
+    "role": "Events Coordinator",
+    "bio": "Organizes engaging workshops, speaker series, and social gatherings, ensuring a dynamic club experience.",
+    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Dana+Decoherence",
+    "linkedin": "#"
+  },
+  {
+    "id": 5,
+    "name": "Eve Superposition",
+    "major": "Physics",
+    "role": "Secretary",
+    "bio": "Manages club communications, maintains records, and assists with administrative tasks for smooth operations.",
+    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Eve+Superposition",
+    "linkedin": "#"
+  },
+  {
+    "id": 6,
+    "name": "Frank Fermion",
+    "major": "Data Science",
+    "role": "Treasurer",
+    "bio": "Handles the club's finances and budget, ensuring responsible allocation of resources for all activities.",
+    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Frank+Fermion",
+    "linkedin": "#"
+  }
+]

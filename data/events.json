@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Quantum Hackathon 2025",
+    "date": "November 10-12, 2025",
+    "time": "All Day",
+    "location": "University Innovation Lab",
+    "description": "A 3-day hackathon challenging participants to solve real-world problems using quantum algorithms.",
+    "link": "https://example.com/hackathon-info",
+    "status": "upcoming"
+  },
+  {
+    "id": 2,
+    "name": "Introduction to Qiskit Workshop",
+    "date": "September 20, 2025",
+    "time": "2:00 PM - 5:00 PM",
+    "location": "Online via Zoom",
+    "description": "Learn the basics of quantum programming with IBM's Qiskit framework. No prior quantum knowledge required!",
+    "link": "https://example.com/qiskit-workshop",
+    "status": "upcoming"
+  },
+  {
+    "id": 3,
+    "name": "Guest Lecture: The Future of Quantum AI",
+    "date": "October 5, 2025",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Auditorium A",
+    "description": "Dr. Anya Sharma discusses breakthroughs and challenges in quantum artificial intelligence and its societal impact.",
+    "link": null,
+    "status": "upcoming"
+  },
+  {
+    "id": 4,
+    "name": "Member Social Mixer",
+    "date": "August 30, 2025",
+    "time": "7:00 PM - 9:00 PM",
+    "location": "Student Union Lounge",
+    "description": "Casual gathering to meet new members and network. Refreshments will be provided.",
+    "link": null,
+    "status": "upcoming"
+  },
+  {
+    "id": 5,
+    "name": "Founding Meeting",
+    "date": "January 15, 2023",
+    "time": "5:00 PM",
+    "location": "Club Room",
+    "description": "The very first meeting of Quantum Nexus, where we laid the groundwork for our club's mission.",
+    "link": null,
+    "status": "previous"
+  },
+  {
+    "id": 6,
+    "name": "Quantum Computing Basics Seminar",
+    "date": "March 10, 2023",
+    "time": "3:00 PM - 4:30 PM",
+    "location": "Lecture Hall B",
+    "description": "An introductory seminar covering the fundamental principles of quantum mechanics for computing.",
+    "link": "https://example.com/previous-seminar-notes",
+    "status": "previous"
+  }
+]
