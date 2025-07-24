@@ -1,7 +1,0 @@
-title: "Quantum Computing @ CMU"
-description: "Official website for the Quantum Computing Club at Carnegie Mellon University."
-baseurl: ""
-url: "https://cmu-qc.github.io"
-theme: minima
-logo: /assets/logo.png
-show_downloads: false
