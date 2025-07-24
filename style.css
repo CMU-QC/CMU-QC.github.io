@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Bruno+Ace&family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* CSS Variables for Colors */
+:root {
+  --color-primary-dark: #1a1a1a;
+  --color-primary-light: #f8f8f8; /* Brighter grey background */
+  --color-text-dark: #333;
+  --color-text-light: #ededed;
+  --color-accent: #ad4035; /* Brick Red */
+  --color-accent-dark: #8b0000; /* Darker Brick Red */
+  --color-background-hero: #ced0ce; /* Slightly darker grey for hero */
+  --color-border: #d0d0d0; /* Lighter border */
+  --color-footer-bg: #e6e8e6; /* Transparent light grey */
+  --color-button-github: #6e5494; /* GitHub purple-ish */
+  --color-button-linkedin: #0a66c2; /* LinkedIn blue */
+  --color-button-twitter: #1da1f2; /* Twitter blue */
+  /* Font for headings, buttons, and prominent text */
+  --font-family-heading: "Figtree", serif;
+  /* Font for paragraphs, lists, and general body text */
+  --font-family-body: "Figtree", sans-serif;
+}
+
+/* Global Box Sizing */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Sticky Footer Setup */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1; /* This makes the content area expand to fill available space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Body Styling */
+body {
+  font-family: var(--font-family-body);
+  padding-top: 60px; /* Space for fixed navbar */
+  background-color: var(--color-primary-light);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+/* Apply the heading font to relevant elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar .logo,
+.button,
+.cta-button {
+  font-family: var(--font-family-heading);
+}
+
+/* Container for Centering Content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-footer-bg); /* Transparent light grey */
+  color: var(
+    --color-text-dark
+  ); /* Dark text for light transparent background */
+  padding: 10px 0;
+  /* Subtle shadow for flat design */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: var(--color-accent);
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex; /* Use flex to align image and text */
+  align-items: center; /* Vertically center items */
+}
+
+.navbar .logo img {
+  margin-right: 8px; /* Space between image and text */
+  height: 30px; /* Adjust height of the logo image */
+  width: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Slightly rounded corners for the image */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin-left: 20px; /* Adjusted margin */
+}
+
+.navbar ul li a {
+  text-decoration: none; /* Ensure no default underline */
+  color: var(--color-text-dark); /* Dark text for light background */
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevent nav links from breaking */
+  position: relative; /* Needed for positioning the pseudo-element */
+  overflow: hidden; /* Hide the pseudo-element until it expands */
+}
+
+.navbar ul li a::after {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the link */
+  left: 0; /* Start from the left */
+  width: 0; /* Initial width is 0 */
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--color-accent); /* Color of the underline */
+  transition: width 0.3s ease; /* Transition for the width property */
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: var(--color-accent);
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+  width: 100%; /* Expand to full width on hover/active */
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--color-background-hero);
+  color: var(--color-text-dark);
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px); /* Full height minus navbar */
+  box-sizing: border-box;
+  position: relative; /* Needed for absolute positioning of the logo */
+  overflow: hidden; /* Hide parts of the logo that go outside */
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative; /* Ensure content is above the logo */
+  z-index: 2; /* Higher z-index than the logo */
+}
+
+.hero-section h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+  text-shadow: none; /* Flat design */
+}
+
+.hero-section p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Hero Background Logo */
+.hero-background {
+  position: absolute;
+  width: max(100vw, 900px);
+  height: auto;
+  opacity: 0.1; /* Make it subtle, like a watermark */
+  z-index: 1; /* Behind the content */
+  pointer-events: none; /* Prevents interaction with the logo */
+  filter: grayscale(100%); /* Make it monochrome */
+  transition: width 0.3s ease, left 0.3s ease, bottom 0.3s ease; /* Smooth transition on resize */
+}
+
+/* Buttons (Call to Action) */
+.button,
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: 10px 22px;
+  border-radius: 9999px; /* Fully rounded */
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Removed transform */
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button:hover,
+.cta-button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.button-small {
+  padding: 8px 15px;
+  font-size: 0.9em;
+}
+
+.button-secondary {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px; /* Fully rounded */
+  margin-left: 10px;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-border);
+}
+
+.button-github {
+  background-color: var(--color-button-github);
+  color: var(--color-text-light);
+}
+
+.button-github:hover {
+  background-color: #583f7c; /* Slightly darker GitHub color */
+}
+
+.button-active {
+  background-color: var(--color-accent-dark);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-accent-dark);
+}
+
+/* Icon styling within buttons/links */
+.button i,
+.cta-button i,
+.social-link i,
+.contact-list i,
+.educational-category ul li a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Content Sections */
+main {
+  width: 100%; /* Ensure main takes full width */
+}
+
+.content-section {
+  padding: 40px 20px;
+  background-color: #ffffff; /* Pure white for content sections */
+  margin: 20px auto;
+  border-radius: 8px;
+  /* Subtle shadow for flat design */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+}
+
+.content-section h2 {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Event Type Selector (Buttons) */
+.event-type-selector {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.event-type-selector .button {
+  margin: 0 10px;
+  padding: 10px 20px;
+}
+
+/* Event Item Specifics */
+.event-item {
+  display: flex;
+  flex-direction: column; /* Stack image and details on small screens */
+  align-items: center; /* Center items when stacked */
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--color-border);
+  text-align: center; /* Center text within event item */
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-thumbnail {
+  width: 100%; /* Take full width of parent */
+  max-width: 300px; /* Max width for larger screens */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-border);
+}
+
+.event-details {
+  flex-grow: 1;
+  width: 100%; /* Ensure details take full width below image */
+}
+
+.event-item h3 {
+  color: var(--color-text-dark);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Adjusted minmax for larger images */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-member {
+  background-color: #ffffff; /* White background for team member cards */
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  /* Subtle shadow for flat design */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  display: flex; /* Use flexbox for stacking content */
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-photo {
+  width: 100%; /* Make image take full width of its container */
+  min-height: 300px; /* Minimum height as requested */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-radius: 8px; /* Rounded corners for the image itself */
+  margin-bottom: 15px;
+  border: 3px solid var(--color-accent);
+}
+
+.member-info {
+  flex-grow: 1; /* Allow info section to grow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push button to bottom if needed */
+  width: 100%; /* Ensure info takes full width */
+}
+
+.team-member h3 {
+  color: var(--color-accent);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.member-details {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.member-bio {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allow bio to take up space */
+}
+
+/* Calendar Embed */
+.calendar-embed {
+  text-align: center;
+  margin: 30px 0;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  height: 0;
+}
+
+.calendar-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  /* Subtle shadow for flat design */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-note {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 15px;
+}
+
+/* Educational Section */
+.educational-category {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.educational-category:last-child {
+  border-bottom: none;
+}
+
+.educational-category h3,
+.educational-category h4 {
+  color: var(--color-accent-dark);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.educational-category h4 {
+  font-size: 1.3em;
+  color: var(--color-text-dark);
+  margin-top: 20px;
+}
+
+.educational-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.educational-category ul li {
+  margin-bottom: 10px;
+}
+
+.educational-category ul li a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.educational-category ul li a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+/* Contact List */
+.contact-list,
+.social-media-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.contact-list li,
+.social-media-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+.social-media-list .social-link {
+  display: inline-block;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  padding: 8px 15px;
+  border-radius: 5px; /* Keep these social links slightly less rounded if desired, or change to 9999px */
+  font-weight: bold;
+  margin-right: 10px; /* Space between social links */
+  margin-bottom: 10px; /* For wrapping on small screens */
+}
+
+.social-media-list .social-link:hover {
+  background-color: #000;
+  text-decoration: none;
+}
+
+.social-media-list .social-link.linkedin {
+  background-color: var(--color-button-linkedin);
+}
+.social-media-list .social-link.linkedin:hover {
+  background-color: #084c8a;
+}
+.social-media-list .social-link.github {
+  background-color: var(--color-button-github);
+}
+.social-media-list .social-link.github:hover {
+  background-color: #583f7c;
+}
+.social-media-list .social-link.twitter {
+  background-color: var(--color-button-twitter);
+}
+.social-media-list .social-link.twitter:hover {
+  background-color: #1a8cd8;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-footer-bg); /* Transparent light grey */
+  color: var(
+    --color-text-dark
+  ); /* Dark text for light transparent background */
+  text-align: center;
+  padding: 25px 0;
+  margin-top: auto; /* Push footer to the bottom using flexbox */
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 769px) {
+  /* For larger screens, arrange event item details next to image */
+  .event-item {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .event-thumbnail {
+    margin-right: 20px;
+    margin-bottom: 0;
+    flex-shrink: 0; /* Prevent thumbnail from shrinking */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar ul li {
+    margin: 5px 10px; /* Adjust spacing for smaller screens */
+  }
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+  .hero-section p {
+    font-size: 1.1em;
+  }
+  .content-section {
+    padding: 20px 15px;
+  }
+  .calendar-embed iframe {
+    height: 400px; /* Adjust height for smaller screens if needed */
+  }
+  .calendar-embed {
+    padding-top: 0; /* Disable aspect ratio padding for small screens */
+    height: 400px; /* Set a fixed height */
+  }
+  .team-grid {
+    grid-template-columns: 1fr; /* Stack team members vertically on small screens */
+  }
+  .hero-background-logo {
+    width: 60vw; /* Larger on smaller screens to still be visible */
+    bottom: -5%;
+    left: -10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 80px 15px;
+  }
+  .hero-section h1 {
+    font-size: 2em;
+  }
+  .hero-section p {
+    font-size: 1em;
+  }
+  .button,
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  .social-media-list .social-link {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .hero-background-logo {
+    width: 70vw; /* Even larger on very small screens */
+    bottom: -2%;
+    left: -15%;
+  }
+}

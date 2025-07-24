@@ -3,29 +3,316 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Seunghyeok Lee" />
-    <title>CMU Quantum Computing Club</title>
+    <title>CMU QC - Advancing Quantum Computing</title>
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Font Awesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>CMU Quantum Computing</h1>
-    <p>Start of a grand website...</p>
-    <h2>Welcome to QC @ CMU!</h2>
-    <p>
-      We are building a vibrant quantum computing community at Carnegie Mellon
-      University.
-    </p>
-    <h2>Projects</h2>
-    <p>
-      Explore our <a href="https://github.com/CMU-QC">GitHub repositories</a>
-    </p>
-    <h2>Events</h2>
-    <p>Talks, workshops, and hackathons—join us!</p>
-    <h2>FLIQ 2025</h2>
-    <p>
-      Check out our
-      <a href="https://github.com/CMU-QC/FLIQ-2025-hackathon">
-        Hackathon Challenge
-      </a>
-    </p>
+    <div id="app">
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo"
+            ><img
+              src="img/logos/QC_logo.svg"
+              alt="Club Logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/30x30/cccccc/333333?text=Logo';"
+            />{{ clubName }}</a
+          >
+          <ul>
+            <li><a href="#" @click.prevent="currentPage = 'home'">Home</a></li>
+            <li>
+              <a href="#" @click.prevent="currentPage = 'events'">Events</a>
+            </li>
+            <li><a href="#" @click.prevent="currentPage = 'team'">Team</a></li>
+            <li>
+              <a href="#" @click.prevent="currentPage = 'calendar'">Calendar</a>
+            </li>
+            <li>
+              <a href="#" @click.prevent="currentPage = 'educational'"
+                >Educational</a
+              >
+            </li>
+            <li>
+              <a href="#" @click.prevent="currentPage = 'contact'">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="content-wrapper">
+        <main>
+          <!-- Hero Section -->
+          <section class="hero-section" v-if="currentPage === 'home'">
+            <img
+              src="img/bg_frame.svg"
+              alt="CMU QC Hero Background"
+              class="hero-background"
+            />
+            <div class="hero-content">
+              <h1>Explore the Frontiers of Quantum Computing</h1>
+              <p>
+                Join CMU QC and be part of the revolution shaping tomorrow's
+                technology.
+              </p>
+              <a :href="joinUsLink" target="_blank" class="cta-button">
+                <i class="fas fa-user-plus"></i> Join Us !
+              </a>
+            </div>
+          </section>
+
+          <!-- Home Section (after hero) -->
+          <section v-if="currentPage === 'home'" class="content-section">
+            <h2>Welcome to {{ clubName }}!</h2>
+            <p>We are a passionate community dedicated to {{ clubFocus }}.</p>
+            <p>
+              Explore our website to learn more about our cutting-edge research,
+              engaging events, and how you can contribute to the quantum future.
+            </p>
+          </section>
+
+          <!-- Events Section -->
+          <section v-if="currentPage === 'events'" class="content-section">
+            <h2>Our Events</h2>
+            <div class="event-type-selector">
+              <button
+                :class="{ 'button': true, 'button-active': currentEventType === 'upcoming' }"
+                @click="currentEventType = 'upcoming'"
+              >
+                Upcoming Events
+              </button>
+              <button
+                :class="{ 'button': true, 'button-active': currentEventType === 'previous' }"
+                @click="currentEventType = 'previous'"
+              >
+                Previous Events
+              </button>
+            </div>
+
+            <div v-if="filteredEvents.length > 0">
+              <div
+                v-for="event in filteredEvents"
+                :key="event.id"
+                class="event-item"
+              >
+                <img
+                  :src="event.thumbnail || 'https://placehold.co/300x200/cccccc/333333?text=Event+Image'"
+                  :alt="event.name + ' thumbnail'"
+                  class="event-thumbnail"
+                />
+                <div class="event-details">
+                  <h3>{{ event.name }}</h3>
+                  <p><strong>Date:</strong> {{ event.date }}</p>
+                  <p><strong>Time:</strong> {{ event.time }}</p>
+                  <p><strong>Location:</strong> {{ event.location }}</p>
+                  <p>{{ event.description }}</p>
+                  <a
+                    v-if="event.link"
+                    :href="event.link"
+                    target="_blank"
+                    class="button"
+                    >More Info</a
+                  >
+                </div>
+              </div>
+            </div>
+            <p v-else>
+              No {{ currentEventType }} events at the moment. Please check back
+              soon!
+            </p>
+            <p style="text-align: center">
+              Check out our past event materials and projects on
+              <br />
+              <a
+                :href="contact.socialMedia.github"
+                target="_blank"
+                class="button button-github"
+                ><i class="fab fa-github"></i> Our GitHub</a
+              >
+            </p>
+          </section>
+
+          <!-- Team Section -->
+          <section v-if="currentPage === 'team'" class="content-section">
+            <h2>Meet the Team</h2>
+            <p>
+              Our team is comprised of dedicated students and faculty advisors
+              passionate about quantum computing.
+            </p>
+            <div class="team-grid">
+              <div
+                v-for="member in teamMembers"
+                :key="member.id"
+                class="team-member"
+              >
+                <img
+                  :src="member.image"
+                  :alt="member.name"
+                  class="member-photo"
+                />
+                <div class="member-info">
+                  <h3>{{ member.name }}</h3>
+                  <p class="member-details">
+                    {{ member.major }} | {{ member.role }}
+                  </p>
+                  <p class="member-bio">{{ member.bio }}</p>
+                  <a
+                    v-if="member.linkedin"
+                    :href="member.linkedin"
+                    target="_blank"
+                    class="button button-small"
+                    ><i class="fab fa-linkedin"></i> LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <p v-if="teamMembers.length === 0">Team information coming soon!</p>
+          </section>
+
+          <!-- Calendar Section -->
+          <section v-if="currentPage === 'calendar'" class="content-section">
+            <h2>Our Calendar</h2>
+            <p>
+              Stay up-to-date with our upcoming meetings, workshops, and events.
+              Add our calendar to your own!
+            </p>
+            <div class="calendar-embed">
+              <!-- Replace with your actual Google Calendar embed code -->
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York"
+                style="border: 0"
+                width="800"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+            <p class="calendar-note">
+              Note: Dates and times are subject to change. Please check
+              regularly.
+            </p>
+          </section>
+
+          <!-- Educational Section -->
+          <section v-if="currentPage === 'educational'" class="content-section">
+            <h2>Educational Resources</h2>
+            <p>
+              Dive deep into quantum computing with our curated list of
+              resources, tutorials, and learning paths.
+            </p>
+
+            <div v-if="educationalResources.length > 0">
+              <div
+                v-for="category in educationalResources"
+                :key="category.id"
+                class="educational-category"
+              >
+                <h3>{{ category.title }}</h3>
+                <div
+                  v-for="subCategory in category.subCategories"
+                  :key="subCategory.id"
+                >
+                  <h4 v-if="subCategory.title">{{ subCategory.title }}</h4>
+                  <ul>
+                    <li
+                      v-for="resource in subCategory.resources"
+                      :key="resource.id"
+                    >
+                      <a :href="resource.link" target="_blank">
+                        <i :class="resource.icon"></i> {{ resource.name }}
+                      </a>
+                      <span v-if="resource.description">
+                        - {{ resource.description }}</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <p v-else>
+              Educational resources are loading or not available. Please check
+              back soon!
+            </p>
+
+            <p>
+              Do you have a resource you think we should add?
+              <a href="#" @click.prevent="currentPage = 'contact'"
+                ><i class="fas fa-lightbulb"></i> Let us know!</a
+              >
+            </p>
+          </section>
+
+          <!-- Contact Section -->
+          <section v-if="currentPage === 'contact'" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to join? Feel free to reach out!</p>
+            <ul class="contact-list">
+              <li>
+                <strong>Email:</strong>
+                <a :href="'mailto:' + contact.email"
+                  ><i class="fas fa-envelope"></i> {{ contact.email }}</a
+                >
+              </li>
+              <li v-if="contact.phone">
+                <strong>Phone:</strong> <i class="fas fa-phone"></i> {{
+                contact.phone }}
+              </li>
+            </ul>
+
+            <h3>Connect with Us on Social Media</h3>
+            <ul class="social-media-list">
+              <li v-if="contact.socialMedia.linkedin">
+                <a
+                  :href="contact.socialMedia.linkedin"
+                  target="_blank"
+                  class="social-link linkedin"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li v-if="contact.socialMedia.github">
+                <a
+                  :href="contact.socialMedia.github"
+                  target="_blank"
+                  class="social-link github"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </li>
+              <li v-if="contact.socialMedia.twitter">
+                <a
+                  :href="contact.socialMedia.twitter"
+                  target="_blank"
+                  class="social-link twitter"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
+              </li>
+            </ul>
+            <p>Ready to get involved?</p>
+            <a :href="joinUsLink" target="_blank" class="button">
+              <i class="fas fa-user-plus"></i> Join CMU QC
+            </a>
+          </section>
+        </main>
+
+        <footer>
+          <div class="container">
+            <p>&copy; {{ currentYear }} {{ clubName }}. All rights reserved.</p>
+            <p>Designed with Quantum Flair.</p>
+          </div>
+        </footer>
+      </div>
+      <!-- End of content-wrapper -->
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
   </body>
 </html>
