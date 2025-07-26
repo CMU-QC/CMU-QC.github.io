@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Bruno+Ace&family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 /* CSS Variables for Colors */
 :root {
@@ -15,11 +15,11 @@
   --color-button-github: #6e5494; /* GitHub purple-ish */
   --color-button-linkedin: #0a66c2; /* LinkedIn blue */
   --color-button-twitter: #1da1f2; /* Twitter blue */
-  --color-button-discord: #5865F2; /* Discord blurple */
+  --color-button-discord: #5865f2; /* Discord blurple */
   /* Font for headings, buttons, and prominent text */
-  --font-family-heading: "Nunito", serif;
+  --font-family-heading: "Figtree", serif;
   /* Font for paragraphs, lists, and general body text */
-  --font-family-body: "Nunito", sans-serif;
+  --font-family-body: "Figtree", sans-serif;
 }
 
 /* Global Box Sizing */
