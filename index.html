@@ -59,10 +59,9 @@
               class="hero-background"
             />
             <div class="hero-content">
-              <h1>Explore the Frontiers of Quantum Computing</h1>
+              <h1>Carnegie Mellon Quantum Computing</h1>
               <p>
-                Join CMU QC and be part of the revolution shaping tomorrow's
-                technology.
+                CMU students exploring quantum science for real-world applications
               </p>
               <a :href="joinUsLink" target="_blank" class="cta-button">
                 <i class="fas fa-user-plus"></i> Join Us !
@@ -72,13 +71,28 @@
 
           <!-- Home Section (after hero) -->
           <section v-if="currentPage === 'home'" class="content-section">
-            <h2>Welcome to {{ clubName }}!</h2>
-            <p>We are a passionate community dedicated to {{ clubFocus }}.</p>
-            <p>
-              Explore our website to learn more about our cutting-edge research,
-              engaging events, and how you can contribute to the quantum future.
-            </p>
-          </section>
+          <h2>About the Club</h2>
+          <h3>Who We Are</h3>
+          <p>
+              Founded in 2024 in partnership with Carnegie Mellon’s Quantum Computing and Information Technologies (QCiT) Center, our club brings together students from diverse backgrounds—physicists, computer scientists, engineers, and the curious alike—united by a passion for quantum computing.
+          </p>
+          </p>
+          <p>
+            At Carnegie Mellon Quantum Computing (QC @ CMU), we’re the first and only student-led organization dedicated to fostering a vibrant quantum community and advancing quantum literacy and research on campus.
+          </p>
+
+          <h3>What We Do</h3>
+          <ul>
+            <li>Host hands-on workshops and guest speaker events</li>
+            <li>Lead research and development projects</li>
+            <li>Collaborate with faculty and industry experts</li>
+            <li>Compete in quantum hackathons and competitions</li>
+          </ul>
+          <p>
+            Join us via the link above to stay informed and access the newest 
+            opportunities to make an impact in the quantum computing community.
+          </p>
+        </section>
 
           <!-- Events Section -->
           <section v-if="currentPage === 'events'" class="content-section">
@@ -286,12 +300,20 @@
                   ><i class="fab fa-github"></i> GitHub</a
                 >
               </li>
-              <li v-if="contact.socialMedia.twitter">
+              <!-- <li v-if="contact.socialMedia.twitter">
                 <a
                   :href="contact.socialMedia.twitter"
                   target="_blank"
                   class="social-link twitter"
                   ><i class="fab fa-twitter"></i> Twitter</a
+                >
+              </li> -->
+              <li v-if="contact.socialMedia.discord">
+                <a
+                  :href="contact.socialMedia.discord"
+                  target="_blank"
+                  class="social-link discord"
+                  ><i class="fab fa-discord"></i> Discord</a
                 >
               </li>
             </ul>

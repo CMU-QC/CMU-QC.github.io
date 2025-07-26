@@ -3,19 +3,19 @@ const { createApp, ref, reactive, computed, onMounted } = Vue;
 createApp({
   setup() {
     // Reactive data for your club
-    const clubName = ref("CMU QC"); // Changed to CMU QC
+    const clubName = ref("CMU Quantum"); // Changed to CMU QC
     const clubMotto = ref("Advancing the Future, Bit by Qubit.");
     const clubFocus = ref(
-      "cutting-edge quantum computing research and education"
+            "cultivating quantum curiosity, education, and collective progress."
     );
-    const foundingYear = ref(2023);
+    const foundingYear = ref(2024);
     const clubMission = ref(
       "fostering a community of quantum enthusiasts, researchers, and developers to push the boundaries of quantum technology"
     );
     const typicalActivities = ref([
       "quantum hackathons",
-      "research seminars",
-      "coding workshops",
+      "research projects",
+      "educational workshops",
       "industry speaker events",
     ]);
 
@@ -34,12 +34,13 @@ createApp({
 
     // Contact information
     const contact = reactive({
-      email: "info@cmuqc.org", // Changed to CMU QC email
+      email: "qc.at.cmu@gmail.com", // Changed to CMU QC email
       phone: "", // Optional
       socialMedia: {
-        linkedin: "https://www.linkedin.com/company/cmu-qc", // Placeholder, update if needed
-        github: "https://github.com/CMU-QC-Official", // Placeholder, update if needed
+        linkedin: "https://www.linkedin.com/company/carnegie-mellon-quantum-computing/about/", // Placeholder, update if needed
+        github: "https://github.com/CMU-QC", // Placeholder, update if needed
         twitter: "https://twitter.com/CMU_QC", // Placeholder, update if needed
+        discord: "https://discord.gg/gNBkFnwtpj"
       },
     });
 
