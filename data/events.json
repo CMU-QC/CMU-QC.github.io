@@ -1,62 +1,83 @@
 [
   {
     "id": 1,
-    "name": "Quantum Hackathon 2025",
-    "date": "November 10-12, 2025",
-    "time": "All Day",
-    "location": "University Innovation Lab",
-    "description": "A 3-day hackathon challenging participants to solve real-world problems using quantum algorithms.",
-    "link": "https://example.com/hackathon-info",
-    "status": "upcoming"
+    "name": "General Body Meeting",
+    "date": "September 14, 2024",
+    "time": "1:00 PM",
+    "location": "Gates-Hillman Center, Room 4307",
+    "description": "The first General Body Meeting introduced the club’s goals and upcoming research opportunities. Members from across CMU connected to learn about the club’s plans for Qiskit Fall Fest. Attendees were invited to join the mailing list to stay updated on future events.",
+    "link": "https://www.linkedin.com/posts/carnegie-mellon-quantum-computing_qc-cmu-join-us-activity-7238953449151746048-b9Qo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtO3gQBzWg934BXZkpLkSzpy6TUu2dHfrs",
+    "thumbnail": "https://cmu-qc.github.io/img/events_pics/GBM1.png",
+    "status": "previous"
   },
   {
     "id": 2,
-    "name": "Introduction to Qiskit Workshop",
-    "date": "September 20, 2025",
-    "time": "2:00 PM - 5:00 PM",
-    "location": "Online via Zoom",
-    "description": "Learn the basics of quantum programming with IBM's Qiskit framework. No prior quantum knowledge required!",
-    "link": "https://example.com/qiskit-workshop",
-    "status": "upcoming"
+    "name": "Kickoff & Speaker Panel",
+    "date": "October 26, 2024",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Gates-Hillman Center, Room 4307",
+    "description": "We hosted our first Qiskit Fall Fest event featuring Dr. Jim Garrison from IBM, who shared his insights into quantum computing and his professional journey. Thanks to all who joined us! Don’t miss the next workshop on November 2nd, where Jake Zaia will introduce the fundamentals of quantum computing.",
+    "link": "https://www.linkedin.com/posts/carnegie-mellon-quantum-computing_we-were-thrilled-to-successfully-host-our-activity-7257124997020762112-Bn6J?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtO3gQBzWg934BXZkpLkSzpy6TUu2dHfrs",
+    "status": "previous"
   },
   {
     "id": 3,
-    "name": "Guest Lecture: The Future of Quantum AI",
-    "date": "October 5, 2025",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Auditorium A",
-    "description": "Dr. Anya Sharma discusses breakthroughs and challenges in quantum artificial intelligence and its societal impact.",
-    "link": null,
-    "status": "upcoming"
+    "name": "Quantum Basics & Qiskit Session",
+    "date": "November 2, 2024",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Gates-Hillman Center, Room 4307",
+    "description": "Led by Jake Zaia, this session covered foundational quantum computing concepts including qubits, Dirac notation, and single-qubit operations. Participants completed hands-on exercises using the IBM Qiskit self-graded notebook to solidify their understanding.",
+    "link": "https://docs.google.com/presentation/d/1UCJtkVwg--P8_gh6xYtqfSxzlH0CEJw3xf4Uv2UBCX0/edit?slide=id.p#slide=id.p",
+    "status": "previous"
   },
   {
     "id": 4,
-    "name": "Member Social Mixer",
-    "date": "August 30, 2025",
-    "time": "7:00 PM - 9:00 PM",
-    "location": "Student Union Lounge",
-    "description": "Casual gathering to meet new members and network. Refreshments will be provided.",
-    "link": null,
-    "status": "upcoming"
+    "name": "Quantum Circuits & Qiskit Workshop",
+    "date": "November 9, 2024",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Gates-Hillman Center, Room 4307",
+    "description": "Jake Zaia led an interactive workshop focused on multiqubit systems and quantum circuit compilation. Attendees built and compiled quantum circuits through guided hands-on exercises using IBM Qiskit notebooks.",
+    "link": "https://docs.google.com/presentation/d/1VCVS2QXH_9_J2hicG3oESHyS9Ir1pYU_sRCkhTpLwBM/edit?slide=id.p#slide=id.p",
+    "status": "previous"
   },
   {
     "id": 5,
-    "name": "Founding Meeting",
-    "date": "January 15, 2023",
+    "name": "Quantum Algorithms & Deep Dive Workshops",
+    "date": "November 16, 2024",
+    "time": "1:00 PM - 4:30 PM",
+    "location": "Gates-Hillman Center, Room 4307",
+    "description": "This extended session introduced key quantum algorithms including VQE. Participants split into focused workshops to explore and practice algorithms such as Bernstein-Vazirani, Deutsch-Jozsa, Grover, and Shor, engaging in hands-on activities.",
+    "link": "https://docs.google.com/document/d/1SrLa0GglY9N7UlctzBa8X2McF_5sWVPVpQnocddQByU/edit?usp=sharing",
+    "status": "previous"
+  },
+  {
+    "id": 7,
+    "name": "Special Q&A with Derek Wang (IBM)",
+    "date": "November 25, 2024",
     "time": "5:00 PM",
-    "location": "Club Room",
-    "description": "The very first meeting of Quantum Nexus, where we laid the groundwork for our club's mission.",
+    "location": "Gates-Hillman Center, Room 4211",
+    "description": "Derek Wang from IBM hosted a dynamic Q&A session, sharing recent quantum research updates and answering participant questions. This event provided valuable insights and sparked engaging discussions.",
     "link": null,
     "status": "previous"
   },
   {
-    "id": 6,
-    "name": "Quantum Computing Basics Seminar",
-    "date": "March 10, 2023",
-    "time": "3:00 PM - 4:30 PM",
-    "location": "Lecture Hall B",
-    "description": "An introductory seminar covering the fundamental principles of quantum mechanics for computing.",
-    "link": "https://example.com/previous-seminar-notes",
-    "status": "previous"
+  "id": 8,
+  "name": "Tartanhacks - Quantum Track",
+  "date": "February 7, 2025",
+  "time": "11:00 AM",
+  "location": "Danforth",
+  "description": "We spoke at and sponsored the Quantum Track at Tartanhacks. We also hosted a demo session on February 7th at 11:00 AM in Danforth, showcasing quantum computing applications. Attendees were invited to join the workshop and explore the exciting quantum integrations and projects created by hackers over the weekend.",
+  "link": null,
+  "status": "previous"
+  },
+  {
+  "id": 9,
+  "name": "Future Leaders in Quantum (FLIQ) Hackathon",
+  "date": "May 16-19, 2025",
+  "time": "Virtual, all day",
+  "location": "Online",
+  "description": "CMU Quantum Club helped organize in the global virtual Future Leaders in Quantum (FLIQ) Hackathon, co-hosted by the Quantum Coalition and ITU in celebration of the UN International Year of Quantum. The hackathon featured eight challenges from leading organizations including IonQ, IBM Quantum, Classiq Technologies, UNICC, Moth, and ID Quantique. Participants competed for a $10,000 prize pool and a funded trip to Geneva to attend the AI for Good Summit. The CMU Quantum Club proudly contributed to the Innovation Track, co-curated with ID Quantique and Carnegie Mellon University, showcasing the impact of quantum technology advancements on a global stage.",
+  "link": "https://github.com/CMU-QC/M25-FLIQ-CMU-x-IDQ",
+  "status": "previous"
   }
 ]

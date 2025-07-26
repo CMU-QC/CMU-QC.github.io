@@ -1,12 +1,12 @@
-const { createApp, ref, reactive, computed, onMounted } = Vue;
+const { createApp, ref, reactive, computed, onMounted, watch } = Vue;
 
 createApp({
   setup() {
-    // Reactive data for your club
-    const clubName = ref("CMU Quantum"); // Changed to CMU QC
+    // Club Information
+    const clubName = ref("CMU Quantum");
     const clubMotto = ref("Advancing the Future, Bit by Qubit.");
     const clubFocus = ref(
-            "cultivating quantum curiosity, education, and collective progress."
+      "cultivating quantum curiosity, education, and collective progress."
     );
     const foundingYear = ref(2024);
     const clubMission = ref(
@@ -19,45 +19,31 @@ createApp({
       "industry speaker events",
     ]);
 
-    // Navigation state
-    const currentPage = ref("home"); // 'home', 'events', 'team', 'calendar', 'educational', 'contact'
+    // Navigation
+    const currentPage = ref("home"); // 'home', 'events', etc.
 
-    // Events data (will be loaded from JSON)
-    const allEvents = ref([]); // Store all events
+    // Events
+    const allEvents = ref([]);
     const currentEventType = ref("upcoming"); // 'upcoming' or 'previous'
 
-    // Team Members data (will be loaded from JSON)
-    const teamMembers = ref([]);
-
-    // Educational Resources data (will be loaded from JSON)
-    const educationalResources = ref([]); // New ref for educational content
-
-    // Contact information
-    const contact = reactive({
-      email: "qc.at.cmu@gmail.com", // Changed to CMU QC email
-      phone: "", // Optional
-      socialMedia: {
-        linkedin: "https://www.linkedin.com/company/carnegie-mellon-quantum-computing/about/", // Placeholder, update if needed
-        github: "https://github.com/CMU-QC", // Placeholder, update if needed
-        twitter: "https://twitter.com/CMU_QC", // Placeholder, update if needed
-        discord: "https://discord.gg/gNBkFnwtpj"
-      },
-    });
-
-    // External "Join Us" link
-    const joinUsLink = ref("https://forms.gle/your-cmuqc-join-form-link"); // **IMPORTANT: Replace with your actual Google Form or signup link**
-
-    // Computed property for current year in footer
-    const currentYear = computed(() => new Date().getFullYear());
-
-    // Computed property to filter events based on currentEventType
+    // Filtered Events (computed)
     const filteredEvents = computed(() => {
       return allEvents.value.filter(
         (event) => event.status === currentEventType.value
       );
     });
 
-    // Function to load events from JSON
+    // Set current event type (used by buttons)
+    const setEventType = (type) => {
+      currentEventType.value = type;
+    };
+
+    // Debug watcher (optional)
+    watch(filteredEvents, (newVal) => {
+      console.log("Filtered events updated:", newVal);
+    });
+
+    // Load events
     const loadEvents = async () => {
       try {
         const response = await fetch("data/events.json");
@@ -65,14 +51,17 @@ createApp({
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        allEvents.value = data; // Store all events
+        console.log("Events loaded:", data); // Debug
+        allEvents.value = data;
       } catch (error) {
         console.error("Error loading events:", error);
-        allEvents.value = []; // Set to empty array on error
+        allEvents.value = [];
       }
     };
 
-    // Function to load team members from JSON
+    // Team Members
+    const teamMembers = ref([]);
+
     const loadTeamMembers = async () => {
       try {
         const response = await fetch("data/team.json");
@@ -83,14 +72,16 @@ createApp({
         teamMembers.value = data;
       } catch (error) {
         console.error("Error loading team members:", error);
-        teamMembers.value = []; // Set to empty array on error
+        teamMembers.value = [];
       }
     };
 
-    // Function to load educational resources from JSON
+    // Educational Resources
+    const educationalResources = ref([]);
+
     const loadEducationalResources = async () => {
       try {
-        const response = await fetch("data/educational.json"); // New path
+        const response = await fetch("data/educational.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -98,30 +89,58 @@ createApp({
         educationalResources.value = data;
       } catch (error) {
         console.error("Error loading educational resources:", error);
-        educationalResources.value = []; // Set to empty array on error
+        educationalResources.value = [];
       }
     };
 
-    // Load data when the component is mounted
+    // Contact and Links
+    const contact = reactive({
+      email: "qc.at.cmu@gmail.com",
+      phone: "",
+      socialMedia: {
+        linkedin:
+          "https://www.linkedin.com/company/carnegie-mellon-quantum-computing/about/",
+        github: "https://github.com/CMU-QC",
+        twitter: "https://twitter.com/CMU_QC",
+        discord: "https://discord.gg/gNBkFnwtpj",
+      },
+    });
+
+    const joinUsLink = ref("https://forms.gle/your-cmuqc-join-form-link");
+
+    // Footer
+    const currentYear = computed(() => new Date().getFullYear());
+
+    // Load all data on mount
     onMounted(() => {
       loadEvents();
       loadTeamMembers();
-      loadEducationalResources(); // Load educational resources
+      loadEducationalResources();
     });
 
     return {
+      // Club Info
       clubName,
       clubMotto,
       clubFocus,
       foundingYear,
       clubMission,
       typicalActivities,
+
+      // Navigation
       currentPage,
+
+      // Events
       allEvents,
       currentEventType,
       filteredEvents,
+      setEventType,
+
+      // Team & Education
       teamMembers,
-      educationalResources, // Expose educational resources
+      educationalResources,
+
+      // Contact
       contact,
       joinUsLink,
       currentYear,
