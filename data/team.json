@@ -4,7 +4,6 @@
     "name": "Dr. Elias Towe",
     "major": "Albert and Ethel Grobstein Professor (ECE/MSE)",
     "role": "Faculty Advisor",
-    "bio": "Specializes in quantum algorithms and cryptography, guiding our research endeavors and fostering academic excellence.",
     "image": "img/team_pics/EliasTowe.png",
     "linkedin": "https://mse.engineering.cmu.edu/directory/bios/towe-elias.html"
   },
@@ -13,7 +12,6 @@
     "name": "Dr. Sridhar Tayur",
     "major": "Ford Distinguished Research Chair (OR)",
     "role": "Faculty Advisor",
-    "bio": "Passionate about quantum machine learning and fostering a vibrant community within the club. Drives strategic initiatives.",
     "image": "img/team_pics/SridharTayur.png",
     "linkedin": "https://en.wikipedia.org/wiki/Sridhar_Tayur#Quantum_communications"
   },
@@ -22,35 +20,31 @@
     "name": "Arul Rhik Mazumder",
     "major": "Computer Science",
     "role": "(Founder) President",
-    "bio": "Leads our initiatives in quantum error correction and experimental quantum systems, pushing theoretical boundaries.",
     "image": "img/team_pics/ArulRhikMazumder.jpg",
     "linkedin": "https://www.linkedin.com/in/arul-mazumder-370294239/"
   },
   {
     "id": 4,
-    "name": "Dana Decoherence",
-    "major": "Applied Mathematics",
-    "role": "Events Coordinator",
-    "bio": "Organizes engaging workshops, speaker series, and social gatherings, ensuring a dynamic club experience.",
-    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Dana+Decoherence",
-    "linkedin": "#"
+    "name": "Tyler Yang",
+    "major": "Computer Science",
+    "role": "Quantum Coalition Liaison",
+    "image": "./img/team_pics/TylerYang.jpeg",
+    "linkedin": "https://www.linkedin.com/in/tyler-j-yang/"
   },
   {
     "id": 5,
-    "name": "Eve Superposition",
-    "major": "Physics",
-    "role": "Secretary",
-    "bio": "Manages club communications, maintains records, and assists with administrative tasks for smooth operations.",
-    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Eve+Superposition",
-    "linkedin": "#"
+    "name": "Seunghyeok Lee",
+    "major": "Electrical and Computer Engineering",
+    "role": "Web Developer & Recruiter",
+    "image": "./img/team_pics/SeunghyeokLee.jpeg",
+    "linkedin": "https://www.linkedin.com/in/seunghyeok-lee/"
   },
   {
     "id": 6,
-    "name": "Frank Fermion",
-    "major": "Data Science",
-    "role": "Treasurer",
-    "bio": "Handles the club's finances and budget, ensuring responsible allocation of resources for all activities.",
-    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Frank+Fermion",
-    "linkedin": "#"
+    "name": "Arshia Dabas",
+    "major": "Physics",
+    "role": "Social Media Manager",
+    "image": "./img/team_pics/ArshiaDabas.jpeg",
+    "linkedin": "https://www.linkedin.com/in/arshia-dabas-ii990/"
   }
 ]
