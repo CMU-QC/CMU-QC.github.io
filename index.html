@@ -50,7 +50,7 @@
       </nav>
 
       <div class="content-wrapper">
-        <main>
+        <main :class="{'has-background': currentPage !== 'home'}">
           <!-- Hero Section -->
           <section class="hero-section" v-if="currentPage === 'home'">
             <img
@@ -192,7 +192,6 @@
                   <p class="member-details">
                     {{ member.major }} | {{ member.role }}
                   </p>
-                  <!-- <p class="member-bio">{{ member.bio }}</p> -->
                   <a
                     v-if="member.linkedin"
                     :href="member.linkedin"

@@ -281,7 +281,7 @@ main {
   flex: 1; /* Allow main to grow and fill available space */
 }
 
-main::before {
+main.has-background::before {
   content: "";
   position: absolute;
   top: 0;
