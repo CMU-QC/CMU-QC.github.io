@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Dr. Alice Quantum",
-    "major": "Quantum Physics",
+    "name": "Dr. Elias Towe",
+    "major": "Albert and Ethel Grobstein Professor (ECE/MSE)",
     "role": "Faculty Advisor",
     "bio": "Specializes in quantum algorithms and cryptography, guiding our research endeavors and fostering academic excellence.",
-    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Alice+Quantum",
-    "linkedin": "#"
+    "image": "img/team_pics/EliasTowe.png",
+    "linkedin": "https://mse.engineering.cmu.edu/directory/bios/towe-elias.html"
   },
   {
     "id": 2,
-    "name": "Bob Qubit",
-    "major": "Computer Science",
-    "role": "President",
+    "name": "Dr. Sridhar Tayur",
+    "major": "Ford Distinguished Research Chair (OR)",
+    "role": "Faculty Advisor",
     "bio": "Passionate about quantum machine learning and fostering a vibrant community within the club. Drives strategic initiatives.",
-    "image": "https://placehold.co/400x300/1A1A1A/ad4035?text=Bob+Qubit",
-    "linkedin": "#"
+    "image": "img/team_pics/SridharTayur.png",
+    "linkedin": "https://en.wikipedia.org/wiki/Sridhar_Tayur#Quantum_communications"
   },
   {
     "id": 3,
-    "name": "Charlie Entangle",
-    "major": "Electrical Engineering",
-    "role": "Research Lead",
+    "name": "Arul Rhik Mazumder",
+    "major": "Computer Science",
+    "role": "(Founder) President",
     "bio": "Leads our initiatives in quantum error correction and experimental quantum systems, pushing theoretical boundaries.",
-    "image": "https://placehold.co/400x300/ad4035/FFFFFF?text=Charlie+Entangle",
-    "linkedin": "#"
+    "image": "img/team_pics/ArulRhikMazumder.jpg",
+    "linkedin": "https://www.linkedin.com/in/arul-mazumder-370294239/"
   },
   {
     "id": 4,

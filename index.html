@@ -111,7 +111,7 @@
                 Previous Events
               </button>
             </div>
-            
+
             <div v-if="filteredEvents.length > 0">
               <div
                 v-for="event in filteredEvents"
@@ -178,13 +178,13 @@
                   <p class="member-details">
                     {{ member.major }} | {{ member.role }}
                   </p>
-                  <p class="member-bio">{{ member.bio }}</p>
+                  <!-- <p class="member-bio">{{ member.bio }}</p> -->
                   <a
                     v-if="member.linkedin"
                     :href="member.linkedin"
                     target="_blank"
                     class="button button-small"
-                    ><i class="fab fa-linkedin"></i> LinkedIn</a
+                    ><i class="fab fa-linkedin"></i> About Me</a
                   >
                 </div>
               </div>
@@ -201,14 +201,7 @@
             </p>
             <div class="calendar-embed">
               <!-- Replace with your actual Google Calendar embed code -->
-              <iframe
-                src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York"
-                style="border: 0"
-                width="800"
-                height="600"
-                frameborder="0"
-                scrolling="no"
-              ></iframe>
+              <iframe src="https://calendar.google.com/calendar/embed?src=qc.at.cmu%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
             <p class="calendar-note">
               Note: Dates and times are subject to change. Please check

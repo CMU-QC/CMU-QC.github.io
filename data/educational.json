@@ -1,7 +1,7 @@
 [
   {
     "id": "getting-started",
-    "title": "Getting Started with Quantum Computing",
+    "title": "Getting Started with Quantum",
     "subCategories": [
       {
         "id": "intro-tools",
@@ -33,75 +33,156 @@
     ]
   },
   {
-    "id": "key-concepts",
-    "title": "Key Concepts & Theory",
+    "id": "quantum-sources-cmu",
+    "title": "Other Quantum at CMU",
     "subCategories": [
       {
-        "id": "qm-fundamentals",
-        "title": "Quantum Mechanics Fundamentals",
+        "id": "cmu-initiatives-summary",
+        "title": "CMU Quantum Initiatives Summary",
         "resources": [
           {
-            "id": "superposition",
-            "name": "Introduction to Superposition",
+            "id": "qcit-summary",
+            "name": "Quantum Computing and Information Technologies",
             "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-atom"
+            "description": "Carnegie Mellon’s flagship center exploring quantum applications.",
+            "icon": "fas fa-university"
           },
           {
-            "id": "entanglement",
-            "name": "Understanding Entanglement",
+            "id": "tepper-quantum-business",
+            "name": "Quantum Technologies Group",
             "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-infinity"
+            "description": "Applies quantum to solve problems in supply chain, finance, healthcare, and more.",
+            "icon": "fas fa-briefcase"
+          },
+          {
+            "id": "pqi-overview-detail",
+            "name": "Pittsburgh Quantum Initiative (PQI)",
+            "link": "#",
+            "description": "Unites over 100 faculty from CMU, Pitt, and Duquesne to promote quantum science.",
+            "icon": "fas fa-network-wired"
           }
         ]
       },
       {
-        "id": "quantum-algorithms",
-        "title": "Quantum Algorithms",
+        "id": "cmu-faculty-media",
+        "title": "CMU Faculty Contributions",
         "resources": [
           {
-            "id": "shors-algorithm",
-            "name": "Shor's Algorithm Explained",
+            "id": "tayur-quantum-blogs",
+            "name": "Dr. Tayur’s Quantum Lectures & Blogs",
             "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-calculator"
+            "description": "Insightful discussions on quantum theory and business applications.",
+            "icon": "fas fa-lightbulb"
           },
           {
-            "id": "grovers-algorithm",
-            "name": "Grover's Algorithm Tutorial",
+            "id": "odonnell-youtube",
+            "name": "Ryan O’Donnell’s YouTube Channel",
             "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-search"
+            "description": "Hundreds of theory-rich lectures in quantum computing and theoretical CS.",
+            "icon": "fab fa-youtube"
           }
         ]
       }
     ]
   },
   {
-    "id": "advanced-topics",
-    "title": "Advanced Topics",
-    "subCategories": [
-      {
-        "id": "advanced-resources",
-        "title": null,
-        "resources": [
-          {
-            "id": "error-correction",
-            "name": "Quantum Error Correction",
-            "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-shield-alt"
-          },
-          {
-            "id": "qml-architectures",
-            "name": "Quantum Machine Learning Architectures",
-            "link": "#",
-            "description": "(Link Coming Soon)",
-            "icon": "fas fa-brain"
-          }
-        ]
-      }
-    ]
-  }
+  "id": "key-concepts",
+  "title": "Other Great Online Learning Resources",
+  "subCategories": [
+    {
+      "id": "learning-platforms",
+      "title": "Online Learning Platforms",
+      "resources": [
+        {
+          "id": "qubit-guide",
+          "name": "Qubit Guide",
+          "link": "https://qubit.guide/index",
+          "icon": "fas fa-cube"
+        },
+        {
+          "id": "linear-algebra-qc",
+          "name": "Linear Algebra for Quantum Computing",
+          "link": "https://github.com/The-Singularity-Research/linear_algebra_for_quantum_computing",
+          "icon": "fas fa-square-root-alt"
+        },
+        {
+          "id": "ibm-learning",
+          "name": "IBM Quantum Learning",
+          "link": "https://quantum.cloud.ibm.com/learning/en",
+          "icon": "fas fa-brain"
+        },
+        {
+          "id": "qiskit-textbook",
+          "name": "Qiskit Textbook",
+          "link": "https://github.com/Qiskit/textbook",
+          "icon": "fas fa-book-open"
+        },
+        {
+          "id": "ocean-docs",
+          "name": "Ocean Documentation",
+          "link": "https://docs.dwavequantum.com/en/latest/index.html",
+          "icon": "fas fa-water"
+        },
+        {
+          "id": "pennylane-docs",
+          "name": "Pennylane Documentation",
+          "link": "https://pennylane.ai/qml/quantum-computing",
+          "icon": "fas fa-leaf"
+        }
+      ]
+    },
+    {
+      "id": "books",
+      "title": "Books",
+      "resources": [
+        {
+          "id": "nielsen-chuang",
+          "name": "Quantum Computation and Quantum Information",
+          "link": "https://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/dp/1107002176",
+          "description": "By Michael Nielsen and Isaac Chuang – foundational quantum textbook.",
+          "icon": "fas fa-book"
+        },
+        {
+          "id": "lipton-regan",
+          "name": "Intro to Quantum Algorithms via Linear Algebra",
+          "link": "https://mitpress.mit.edu/9780262045254/introduction-to-quantum-algorithms-via-linear-algebra/",
+          "description": "By Lipton and Regan – algorithm-focused with mathematical rigor.",
+          "icon": "fas fa-book"
+        },
+        {
+          "id": "yanofsky-mannucci",
+          "name": "Quantum Computing for Computer Scientists",
+          "link": "https://www.amazon.com/Quantum-Computing-Computer-Scientists-Yanofsky/dp/0521879965",
+          "description": "An accessible, CS-oriented intro to quantum computing.",
+          "icon": "fas fa-book"
+        }
+      ]
+    },
+    {
+      "id": "other-communities",
+      "title": "Other Community & Open Source Resources",
+      "resources": [
+        {
+          "id": "qosf",
+          "name": "Quantum Open Source Foundation (QOSF)",
+          "link": "https://qosf.org/learn_quantum/",
+          "icon": "fas fa-users"
+        },
+        {
+          "id": "medium-quantum",
+          "name": "Quantum on Medium",
+          "link": "https://decarolichiara.medium.com/a-guide-to-online-mostly-free-resources-for-learning-quantum-computing-9b3468522b49",
+          "icon": "fab fa-medium"
+        },
+        {
+          "id": "awesome-quantum",
+          "name": "Awesome Quantum",
+          "link": "https://github.com/arulrhikm/awesome-quantum-computing",
+          "icon": "fas fa-star"
+        }
+      ]
+    }
+  ]
+}
+
 ]

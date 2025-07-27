@@ -106,7 +106,7 @@ createApp({
       },
     });
 
-    const joinUsLink = ref("https://forms.gle/your-cmuqc-join-form-link");
+    const joinUsLink = ref("https://docs.google.com/forms/d/e/1FAIpQLSfVZGCVMvJu8CRKKPmgQm3U5XDTK-WgJ_axsjY-EAhyt6zGRg/viewform?usp=dialog");
 
     // Footer
     const currentYear = computed(() => new Date().getFullYear());
