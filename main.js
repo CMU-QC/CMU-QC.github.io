@@ -23,27 +23,19 @@ createApp({
     const currentPage = ref("home"); // 'home', 'events', etc.
 
     // Events
-    const allEvents = ref([]);
+    const upcomingEvents = ref([]);
+    const pastEvents = ref([]);
     const currentEventType = ref("upcoming"); // 'upcoming' or 'previous'
 
     // Filtered Events (computed)
     const filteredEvents = computed(() => {
-      return allEvents.value.filter(
-        (event) => event.status === currentEventType.value
-      );
-    });
-
-    // Set current event type (used by buttons)
-    const setEventType = (type) => {
-      currentEventType.value = type;
-    };
-
-    // Debug watcher (optional)
-    watch(filteredEvents, (newVal) => {
-      console.log("Filtered events updated:", newVal);
+      return currentEventType.value === "upcoming"
+        ? upcomingEvents.value
+        : pastEvents.value;
     });
 
     // Load events
+    // Function to load and sort events from JSON
     const loadEvents = async () => {
       try {
         const response = await fetch("data/events.json");
@@ -51,11 +43,49 @@ createApp({
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("Events loaded:", data); // Debug
-        allEvents.value = data;
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Normalize today's date to midnight
+
+        const tempUpcoming = [];
+        const tempPast = [];
+
+        data.forEach((event) => {
+          const eventStartDate = new Date(event.startDate);
+          if (isNaN(eventStartDate.getTime())) {
+            console.warn(
+              `Invalid startDate format for event: ${event.name} (${event.startDate}). This event may not be sorted correctly.`
+            );
+            return;
+          }
+          eventStartDate.setHours(0, 0, 0, 0); // Normalize event start date to midnight
+
+          if (eventStartDate >= today) {
+            tempUpcoming.push(event);
+          } else {
+            tempPast.push(event);
+          }
+        });
+
+        // Sort upcoming events from earliest startDate to latest
+        tempUpcoming.sort((a, b) => {
+          const dateA = new Date(a.startDate).getTime();
+          const dateB = new Date(b.startDate).getTime();
+          return dateA - dateB;
+        });
+        upcomingEvents.value = tempUpcoming;
+
+        // Sort past events from latest startDate to earliest (most recent first)
+        tempPast.sort((a, b) => {
+          const dateA = new Date(a.startDate).getTime();
+          const dateB = new Date(b.startDate).getTime();
+          return dateB - dateA; // b - a for descending order (latest first)
+        });
+        pastEvents.value = tempPast;
       } catch (error) {
         console.error("Error loading events:", error);
-        allEvents.value = [];
+        upcomingEvents.value = [];
+        pastEvents.value = [];
       }
     };
 
@@ -106,7 +136,9 @@ createApp({
       },
     });
 
-    const joinUsLink = ref("https://docs.google.com/forms/d/e/1FAIpQLSfVZGCVMvJu8CRKKPmgQm3U5XDTK-WgJ_axsjY-EAhyt6zGRg/viewform?usp=dialog");
+    const joinUsLink = ref(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfVZGCVMvJu8CRKKPmgQm3U5XDTK-WgJ_axsjY-EAhyt6zGRg/viewform?usp=dialog"
+    );
 
     // Footer
     const currentYear = computed(() => new Date().getFullYear());
@@ -131,10 +163,8 @@ createApp({
       currentPage,
 
       // Events
-      allEvents,
       currentEventType,
       filteredEvents,
-      setEventType,
 
       // Team & Education
       teamMembers,

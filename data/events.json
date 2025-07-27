@@ -2,123 +2,122 @@
   {
     "id": 1,
     "name": "General Body Meeting",
-    "date": "September 14, 2024",
+    "startDate": "September 14, 2024",
+    "endDate": "September 14, 2024",
     "time": "1:00 PM",
     "location": "Gates-Hillman Center, Room 4307",
     "description": "The first General Body Meeting introduced the club’s goals and upcoming research opportunities. Members from across CMU connected to learn about the club’s plans for Qiskit Fall Fest. Attendees were invited to join the mailing list to stay updated on future events.",
     "link": "https://www.linkedin.com/posts/carnegie-mellon-quantum-computing_qc-cmu-join-us-activity-7238953449151746048-b9Qo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtO3gQBzWg934BXZkpLkSzpy6TUu2dHfrs",
-    "thumbnail": "img/events_pics/QCCMU.png",
-    "status": "previous"
+    "thumbnail": "img/events_pics/QCCMU.png"
   },
   {
     "id": 2,
     "name": "Kickoff & Speaker Panel",
-    "date": "October 26, 2024",
+    "startDate": "October 26, 2024",
+    "endDate": "October 26, 2024",
     "time": "1:00 PM - 2:30 PM",
     "location": "Gates-Hillman Center, Room 4307",
     "description": "We hosted our first Qiskit Fall Fest event featuring Dr. Jim Garrison from IBM, who shared his insights into quantum computing and his professional journey. Thanks to all who joined us! Don’t miss the next workshop on November 2nd, where Jake Zaia will introduce the fundamentals of quantum computing.",
     "link": "https://www.linkedin.com/posts/carnegie-mellon-quantum-computing_we-were-thrilled-to-successfully-host-our-activity-7257124997020762112-Bn6J?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtO3gQBzWg934BXZkpLkSzpy6TUu2dHfrs",
-    "thumbnail": "img/events_pics/IBMQ.png",
-    "status": "previous"
+    "thumbnail": "img/events_pics/IBMQ.png"
   },
   {
     "id": 3,
     "name": "Quantum Basics & Qiskit Session",
-    "date": "November 2, 2024",
+    "startDate": "November 2, 2024",
+    "endDate": "November 2, 2024",
     "time": "1:00 PM - 2:30 PM",
     "location": "Gates-Hillman Center, Room 4307",
     "description": "Led by Jake Zaia, this session covered foundational quantum computing concepts including qubits, Dirac notation, and single-qubit operations. Participants completed hands-on exercises using the IBM Qiskit self-graded notebook to solidify their understanding.",
     "link": "https://docs.google.com/presentation/d/1UCJtkVwg--P8_gh6xYtqfSxzlH0CEJw3xf4Uv2UBCX0/edit?slide=id.p#slide=id.p",
-    "thumbnail": "img/events_pics/QFFW.png",
-    "status": "previous"
+    "thumbnail": "img/events_pics/QFFW.png"
   },
   {
     "id": 4,
     "name": "Quantum Circuits & Qiskit Workshop",
-    "date": "November 9, 2024",
+    "startDate": "November 9, 2024",
+    "endDate": "November 9, 2024",
     "time": "1:00 PM - 2:30 PM",
     "location": "Gates-Hillman Center, Room 4307",
     "description": "Jake Zaia led an interactive workshop focused on multiqubit systems and quantum circuit compilation. Attendees built and compiled quantum circuits through guided hands-on exercises using IBM Qiskit notebooks.",
     "link": "https://docs.google.com/presentation/d/1VCVS2QXH_9_J2hicG3oESHyS9Ir1pYU_sRCkhTpLwBM/edit?slide=id.p#slide=id.p",
-    "thumbnail": "img/events_pics/QFFW.png",
-    "status": "previous"
+    "thumbnail": "img/events_pics/QFFW.png"
   },
   {
     "id": 5,
     "name": "Quantum Algorithms & Deep Dive Workshops",
-    "date": "November 16, 2024",
+    "startDate": "November 16, 2024",
+    "endDate": "November 16, 2024",
     "time": "1:00 PM - 4:30 PM",
     "location": "Gates-Hillman Center, Room 4307",
     "description": "This extended session introduced key quantum algorithms including VQE. Participants split into focused workshops to explore and practice algorithms such as Bernstein-Vazirani, Deutsch-Jozsa, Grover, and Shor, engaging in hands-on activities.",
     "link": "https://docs.google.com/document/d/1SrLa0GglY9N7UlctzBa8X2McF_5sWVPVpQnocddQByU/edit?usp=sharing",
-    "thumbnail": "img/events_pics/QFFW.png",
-    "status": "previous"
+    "thumbnail": "img/events_pics/QFFW.png"
   },
   {
     "id": 7,
     "name": "Q&A with Derek Wang (IBM)",
-    "date": "November 25, 2024",
+    "startDate": "November 25, 2024",
+    "endDate": "November 25, 2024",
     "time": "5:00 PM",
     "location": "Gates-Hillman Center, Room 4211",
     "description": "Derek Wang from IBM hosted a dynamic Q&A session, sharing recent quantum research updates and answering participant questions. This event provided valuable insights and sparked engaging discussions.",
     "thumbnail": "img/events_pics/IBMQ.png",
+    "link": null
+  },
+  {
+    "id": 8,
+    "name": "Tartanhacks - Quantum Track",
+    "startDate": "February 7, 2025",
+    "endDate": "February 8, 2025",
+    "time": "11:00 AM",
+    "location": "Danforth",
+    "description": "We spoke at and sponsored the Quantum Track at Tartanhacks. We also hosted a demo session on February 7th at 11:00 AM in Danforth, showcasing quantum computing applications. Attendees were invited to join the workshop and explore the exciting quantum integrations and projects created by hackers over the weekend.",
+    "link": "https://tartanhacks.com/",
+    "thumbnail": "img/events_pics/TartanHacks2025.png"
+  },
+  {
+    "id": 9,
+    "name": "Future Leaders in Quantum (FLIQ) Hackathon",
+    "startDate": "May 16, 2025",
+    "endDate": "May 19, 2025",
+    "time": "Virtual, all day",
+    "location": "Online",
+    "description": "CMU Quantum Club helped organize in the global virtual Future Leaders in Quantum (FLIQ) Hackathon, co-hosted by the Quantum Coalition and ITU in celebration of the UN International Year of Quantum. The hackathon featured eight challenges from leading organizations including IonQ, IBM Quantum, Classiq Technologies, UNICC, Moth, and ID Quantique. Participants competed for a $10,000 prize pool and a funded trip to Geneva to attend the AI for Good Summit. The CMU Quantum Club proudly contributed to the Innovation Track, co-curated with ID Quantique and Carnegie Mellon University, showcasing the impact of quantum technology advancements on a global stage.",
+    "link": "img/events_pics/FLIQ2025.png",
+    "thumbnail": "img/events_pics/FLIQ2025.png"
+  },
+  {
+    "id": 10,
+    "name": "Industry Talk with Vadim Karpusenko (IonQ)",
+    "startDate": "September 6, 2025",
+    "endDate": "September 6, 2025",
+    "time": "1:00 PM",
+    "location": "TBA",
+    "description": "Join us for an exciting talk with Vadim Karpusenko from IonQ, one of the global leaders in quantum computing. IonQ is pushing the boundaries of what’s possible by building scalable quantum systems based on trapped-ion technology—recognized for their exceptional coherence times and high gate fidelities. From quantum hardware breakthroughs to real-world commercial applications, IonQ is at the forefront of quantum innovation. Don’t miss this opportunity to hear directly from a leader in the field and learn how IonQ is shaping the future of computation.",
     "link": null,
-    "status": "previous"
+    "thumbnail": "img/events_pics/IonQ.jpg"
   },
   {
-  "id": 8,
-  "name": "Tartanhacks - Quantum Track",
-  "date": "February 7-8, 2025",
-  "time": "11:00 AM",
-  "location": "Danforth",
-  "description": "We spoke at and sponsored the Quantum Track at Tartanhacks. We also hosted a demo session on February 7th at 11:00 AM in Danforth, showcasing quantum computing applications. Attendees were invited to join the workshop and explore the exciting quantum integrations and projects created by hackers over the weekend.",
-  "link": "https://tartanhacks.com/",
-  "thumbnail": "img/events_pics/TartanHacks2025.png",
-  "status": "previous"
+    "id": 11,
+    "name": "Quantum Architecture with Pengyu Liu (QuEra)",
+    "startDate": "September 14, 2025",
+    "endDate": "September 14, 2025",
+    "time": "1:00 PM",
+    "location": "TBA",
+    "description": "Dive into the future of computing with Pengyu Liu from QuEra, a trailblazer in neutral-atom quantum technologies. QuEra is revolutionizing the landscape of quantum computation by pioneering reconfigurable quantum architectures that unlock unprecedented scalability and flexibility. In this engaging talk, Pengyu Liu will explore cutting-edge advancements in quantum architecture, and how QuEra’s breakthrough platform is setting the stage for solving problems far beyond the reach of classical systems. Whether you're a quantum enthusiast or just curious about where the next big leap in technology is coming from, this is a talk you won’t want to miss.",
+    "link": null,
+    "thumbnail": "img/events_pics/QuEra.jpg"
   },
   {
-  "id": 9,
-  "name": "Future Leaders in Quantum (FLIQ) Hackathon",
-  "date": "May 16-19, 2025",
-  "time": "Virtual, all day",
-  "location": "Online",
-  "description": "CMU Quantum Club helped organize in the global virtual Future Leaders in Quantum (FLIQ) Hackathon, co-hosted by the Quantum Coalition and ITU in celebration of the UN International Year of Quantum. The hackathon featured eight challenges from leading organizations including IonQ, IBM Quantum, Classiq Technologies, UNICC, Moth, and ID Quantique. Participants competed for a $10,000 prize pool and a funded trip to Geneva to attend the AI for Good Summit. The CMU Quantum Club proudly contributed to the Innovation Track, co-curated with ID Quantique and Carnegie Mellon University, showcasing the impact of quantum technology advancements on a global stage.",
-  "link": "img/events_pics/FLIQ2025.png",
-  "thumbnail": "img/events_pics/FLIQ2025.png",
-  "status": "previous"
-  },
-  {
-  "id": 10,
-  "name": "Industry Talk with Vadim Karpusenko (IonQ)",
-  "date": "September 6, 2025",
-  "time": "1:00 PM",
-  "location": "TBA",
-  "description": "Join us for an exciting talk with Vadim Karpusenko from IonQ, one of the global leaders in quantum computing. IonQ is pushing the boundaries of what’s possible by building scalable quantum systems based on trapped-ion technology—recognized for their exceptional coherence times and high gate fidelities. From quantum hardware breakthroughs to real-world commercial applications, IonQ is at the forefront of quantum innovation. Don’t miss this opportunity to hear directly from a leader in the field and learn how IonQ is shaping the future of computation.",
-  "link": null,
-  "thumbnail": "img/events_pics/IonQ.jpg",
-  "status": "upcoming"
-  },
-  {
-  "id": 11,
-  "name": "Quantum Architecture with Pengyu Liu (QuEra)",
-  "date": "September 14, 2025",
-  "time": "1:00 PM",
-  "location": "TBA",
-  "description": "Dive into the future of computing with Pengyu Liu from QuEra, a trailblazer in neutral-atom quantum technologies. QuEra is revolutionizing the landscape of quantum computation by pioneering reconfigurable quantum architectures that unlock unprecedented scalability and flexibility. In this engaging talk, Pengyu Liu will explore cutting-edge advancements in quantum architecture, and how QuEra’s breakthrough platform is setting the stage for solving problems far beyond the reach of classical systems. Whether you're a quantum enthusiast or just curious about where the next big leap in technology is coming from, this is a talk you won’t want to miss.",
-  "link": null,
-  "thumbnail": "img/events_pics/QuEra.jpg",
-  "status": "upcoming"
-  },
-  {
-  "id": 12,
-  "name": "Industry Talk with Victor Kerros (Alice & Bob)",
-  "date": "October 2, 2025",
-  "time": "6:00 PM",
-  "location": "TBA",
-  "description": "Come hear from Victor Kerros of Alice & Bob, the Paris-based startup revolutionizing the future of fault-tolerant quantum computing. Alice & Bob are pioneering the use of cat qubits—an innovative approach that passively protects quantum information and drastically reduces error rates. Backed by cutting-edge research and a world-class team, they’re on a mission to build the first universal, error-corrected quantum computer. This is a must-attend talk for anyone curious about quantum hardware, quantum error correction, and what it will take to make quantum truly scalable.",
-  "link": null,
-  "thumbnail": "img/events_pics/Alice&Bob.jpg",
-  "status": "upcoming"
-}
-
+    "id": 12,
+    "name": "Industry Talk with Victor Kerros (Alice & Bob)",
+    "startDate": "October 2, 2025",
+    "endDate": "October 2, 2025",
+    "time": "6:00 PM",
+    "location": "TBA",
+    "description": "Come hear from Victor Kerros of Alice & Bob, the Paris-based startup revolutionizing the future of fault-tolerant quantum computing. Alice & Bob are pioneering the use of cat qubits—an innovative approach that passively protects quantum information and drastically reduces error rates. Backed by cutting-edge research and a world-class team, they’re on a mission to build the first universal, error-corrected quantum computer. This is a must-attend talk for anyone curious about quantum hardware, quantum error correction, and what it will take to make quantum truly scalable.",
+    "link": null,
+    "thumbnail": "img/events_pics/Alice&Bob.jpg"
+  }
 ]
