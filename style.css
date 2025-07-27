@@ -26,6 +26,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -274,6 +275,27 @@ h6,
 /* Content Sections */
 main {
   width: 100%; /* Ensure main takes full width */
+  position: relative; /* Establish positioning context for pseudo-element */
+  z-index: 0; /* Ensure main itself has a z-index */
+  overflow: hidden; /* Important for pseudo-element to stay within main's bounds */
+  flex: 1; /* Allow main to grow and fill available space */
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Now 100% of the expanded main element */
+  background-image: url("./img/bg_elaborate_frame.svg"); /* Path to your SVG */
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: repeat;
+  filter: grayscale(100%);
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .content-section {
