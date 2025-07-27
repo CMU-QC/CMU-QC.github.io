@@ -107,16 +107,16 @@
             <h2>Our Events</h2>
             <div class="event-type-selector">
               <button
-                :class="{ 'button': true, 'button-active': currentEventType === 'previous' }"
-                @click="currentEventType = 'previous'"
-              >
-                Previous Events
-              </button>
-              <button
                 :class="{ 'button': true, 'button-active': currentEventType === 'upcoming' }"
                 @click="currentEventType = 'upcoming'"
               >
                 Upcoming Events
+              </button>
+              <button
+                :class="{ 'button': true, 'button-active': currentEventType === 'previous' }"
+                @click="currentEventType = 'previous'"
+              >
+                Previous Events
               </button>
             </div>
 
