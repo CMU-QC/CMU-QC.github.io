@@ -61,7 +61,8 @@
             <div class="hero-content">
               <h1>Carnegie Mellon Quantum Computing</h1>
               <p>
-                CMU students exploring quantum science for real-world applications
+                CMU students exploring quantum science for real-world
+                applications
               </p>
               <a :href="joinUsLink" target="_blank" class="cta-button">
                 <i class="fas fa-user-plus"></i> Join Us !
@@ -71,44 +72,51 @@
 
           <!-- Home Section (after hero) -->
           <section v-if="currentPage === 'home'" class="content-section">
-          <h2>About the Club</h2>
-          <h3>Who We Are</h3>
-          <p>
-              Founded in 2024 in partnership with Carnegie Mellon’s Quantum Computing and Information Technologies (QCiT) Center, our club brings together students from diverse backgrounds—physicists, computer scientists, engineers, and the curious alike—united by a passion for quantum computing.
-          </p>
-          </p>
-          <p>
-            At Carnegie Mellon Quantum Computing (QC @ CMU), we’re the first and only student-led organization dedicated to fostering a vibrant quantum community and advancing quantum literacy and research on campus.
-          </p>
+            <h2>About the Club</h2>
+            <h3>Who We Are</h3>
+            <p>
+              Founded in 2024 in partnership with Carnegie Mellon’s Quantum
+              Computing and Information Technologies (QCiT) Center, our club
+              brings together students from diverse backgrounds—physicists,
+              computer scientists, engineers, and the curious alike—united by a
+              passion for quantum computing.
+            </p>
+            <p>
+              At Carnegie Mellon Quantum Computing (QC @ CMU), we’re the first
+              and only student-led organization dedicated to fostering a vibrant
+              quantum community and advancing quantum literacy and research on
+              campus.
+            </p>
 
-          <h3>What We Do</h3>
-          <ul>
-            <li>Host hands-on workshops and guest speaker events</li>
-            <li>Lead research and development projects</li>
-            <li>Collaborate with faculty and industry experts</li>
-            <li>Compete in quantum hackathons and competitions</li>
-          </ul>
-          <p>
-            Join us via the link above to stay informed and access the newest 
-            opportunities to make an impact in the quantum computing community.
-          </p>
-        </section>
+            <h3>What We Do</h3>
+            <ul>
+              <li>Host hands-on workshops and guest speaker events</li>
+              <li>Lead research and development projects</li>
+              <li>Collaborate with faculty and industry experts</li>
+              <li>Compete in quantum hackathons and competitions</li>
+            </ul>
+            <p>
+              Join us via the link above to stay informed and access the newest
+              opportunities to make an impact in the quantum computing
+              community.
+            </p>
+          </section>
 
           <!-- Events Section -->
           <section v-if="currentPage === 'events'" class="content-section">
             <h2>Our Events</h2>
             <div class="event-type-selector">
               <button
-                :class="{ 'button': true, 'button-active': currentEventType === 'upcoming' }"
-                @click="currentEventType = 'upcoming'"
-              >
-                Upcoming Events
-              </button>
-              <button
                 :class="{ 'button': true, 'button-active': currentEventType === 'previous' }"
                 @click="currentEventType = 'previous'"
               >
                 Previous Events
+              </button>
+              <button
+                :class="{ 'button': true, 'button-active': currentEventType === 'upcoming' }"
+                @click="currentEventType = 'upcoming'"
+              >
+                Upcoming Events
               </button>
             </div>
 
@@ -125,7 +133,14 @@
                 />
                 <div class="event-details">
                   <h3>{{ event.name }}</h3>
-                  <p><strong>Date:</strong> {{ event.date }}</p>
+                  <p>
+                    <strong>Date:</strong> {{ event.startDate }}
+                    <span
+                      v-if="event.endDate && event.startDate !== event.endDate"
+                    >
+                      - {{ event.endDate }}</span
+                    >
+                  </p>
                   <p><strong>Time:</strong> {{ event.time }}</p>
                   <p><strong>Location:</strong> {{ event.location }}</p>
                   <p>{{ event.description }}</p>
@@ -143,9 +158,8 @@
               No {{ currentEventType }} events at the moment. Please check back
               soon!
             </p>
-            <p style="text-align: center">
+            <p>
               Check out our past event materials and projects on
-              <br />
               <a
                 :href="contact.socialMedia.github"
                 target="_blank"
@@ -201,7 +215,14 @@
             </p>
             <div class="calendar-embed">
               <!-- Replace with your actual Google Calendar embed code -->
-              <iframe src="https://calendar.google.com/calendar/embed?src=qc.at.cmu%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=qc.at.cmu%40gmail.com&ctz=America%2FNew_York"
+                style="border: 0"
+                width="800"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+              ></iframe>
             </div>
             <p class="calendar-note">
               Note: Dates and times are subject to change. Please check
