@@ -119,5 +119,27 @@
     "description": "Come hear from Victor Kerros of Alice & Bob, the Paris-based startup revolutionizing the future of fault-tolerant quantum computing. Alice & Bob are pioneering the use of cat qubits—an innovative approach that passively protects quantum information and drastically reduces error rates. Backed by cutting-edge research and a world-class team, they’re on a mission to build the first universal, error-corrected quantum computer. This is a must-attend talk for anyone curious about quantum hardware, quantum error correction, and what it will take to make quantum truly scalable.",
     "link": null,
     "thumbnail": "img/events_pics/Alice&Bob.jpg"
-  }
+  },
+  {
+  "id": 13,
+  "name": "Industry Talk with Eric Brunner (Quantinuum)",
+  "startDate": "October 25, 2025",
+  "endDate": "October 25, 2025",
+  "time": "1:00 PM",
+  "location": "TBA",
+  "description": "Join us for an exciting industry talk with Eric Brunner from Quantinuum, one of the world’s leading quantum computing companies pushing the boundaries of what’s possible. Backed by world-class hardware and deep theoretical expertise, Quantinuum is pioneering scalable, fault-tolerant quantum systems with real-world impact across chemistry, materials science, cryptography, and beyond. Eric will share insights into his journey to Quantinuum, what it's like working at the forefront of quantum innovation, and give a high-level look at some of the cutting-edge research projects he's recently been involved in. If you're curious about the intersection of academia, industry, and truly transformative quantum tech—this is a talk you won’t want to miss.",
+  "link": null,
+  "thumbnail": "img/events_pics/Quantinuum.jpg"
+  },
+  {
+  "id": 13,
+  "name": "Distributed Quantum Systems with Rohit Ganti (HPE)",
+  "startDate": "November 1, 2025",
+  "endDate": "November 1, 2025",
+  "time": "1:00 PM",
+  "location": "TBA",
+  "description": "Explore the next generation of scalable quantum computing with Rohit Ganti from Hewlett Packard Enterprise, a company at the forefront of bridging classical and quantum systems. In this talk, Rohit will delve into Adaptive Circuit Distribution—an emerging paradigm that enables large-scale quantum algorithms to run across distributed hardware—and share his experiences working on cutting-edge quantum initiatives at HPE. As a researcher embedded in an innovative startup-like division, he’ll offer a unique perspective on the challenges and breakthroughs driving distributed quantum computing forward. Whether you're interested in systems architecture, hybrid approaches, or real-world quantum engineering, this is a session you won’t want to miss.",
+  "link": null,
+  "thumbnail": "img/events_pics/HPE.jpg"
+}
 ]
