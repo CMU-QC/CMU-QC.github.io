@@ -110,6 +110,17 @@
     "thumbnail": "img/events_pics/QuEra.jpg"
   },
   {
+  "id": 13,
+  "name": "Industry Talk with Hayk Tepanyan (BlueQubit)",
+  "startDate": "September 20, 2025",
+  "endDate": "September 20, 2025",
+  "time": "1:00 PM",
+  "location": "TBA",
+  "description": "Join Hayk Tepanyan, Co-Founder of BlueQubit, for a deep dive into the practical deployment of quantum computing in industry. BlueQubit is building the software stack for quantum advantage—empowering developers with accessible tools, optimized compilers, and scalable workflows for quantum applications. Learn how this U.S.-based startup is bridging the gap between quantum algorithms and real-world use cases, from AI to optimization. If you're interested in the future of quantum software and startups at the cutting edge, this talk is for you.",
+  "link": null,
+  "thumbnail": "img/events_pics/bluequbit.jpg"
+  },
+  {
     "id": 12,
     "name": "Industry Talk with Victor Kerros (Alice & Bob)",
     "startDate": "October 2, 2025",
@@ -141,5 +152,5 @@
   "description": "Explore the next generation of scalable quantum computing with Rohit Ganti from Hewlett Packard Enterprise, a company at the forefront of bridging classical and quantum systems. In this talk, Rohit will delve into Adaptive Circuit Distribution—an emerging paradigm that enables large-scale quantum algorithms to run across distributed hardware—and share his experiences working on cutting-edge quantum initiatives at HPE. As a researcher embedded in an innovative startup-like division, he’ll offer a unique perspective on the challenges and breakthroughs driving distributed quantum computing forward. Whether you're interested in systems architecture, hybrid approaches, or real-world quantum engineering, this is a session you won’t want to miss.",
   "link": null,
   "thumbnail": "img/events_pics/HPE.jpg"
-}
+  }
 ]
