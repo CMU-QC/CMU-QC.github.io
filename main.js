@@ -89,6 +89,31 @@ createApp({
       }
     };
 
+    // Filter Projects
+    const projects = ref([]);
+    const currentProjectType = ref("current"); // 'current' or 'previous'
+
+    const filteredProjects = computed(() => {
+      return projects.value.filter(
+        (project) => project.status === currentProjectType.value
+      );
+    });
+
+    // Load projects
+    const loadProjects = async () => {
+      try {
+        const response = await fetch("data/projects.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        projects.value = data;
+      } catch (error) {
+        console.error("Error loading projects:", error);
+        projects.value = [];
+      }
+    };
+
     // Team Members
     const teamMembers = ref([]);
 
@@ -146,6 +171,7 @@ createApp({
     // Load all data on mount
     onMounted(() => {
       loadEvents();
+      loadProjects();
       loadTeamMembers();
       loadEducationalResources();
     });
@@ -165,6 +191,10 @@ createApp({
       // Events
       currentEventType,
       filteredEvents,
+
+      // Projects
+      currentProjectType,
+      filteredProjects,
 
       // Team & Education
       teamMembers,

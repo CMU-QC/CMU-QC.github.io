@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Quantum Machine Learning",
+    "description": "A project focused on applying quantum algorithms to machine learning tasks, exploring the potential for speedup and new computational paradigms.",
+    "status": "current",
+    "link": "https://example.com/qml-apply",
+    "thumbnail": "https://placehold.co/300x200/cccccc/333333?text=QML"
+  },
+  {
+    "id": 2,
+    "name": "Quantum Communication Networks",
+    "description": "Building a simulation of a quantum network to understand the challenges and opportunities of secure quantum communication.",
+    "status": "current",
+    "link": "https://example.com/qcn-apply"
+  },
+  {
+    "id": 3,
+    "name": "Superconducting Qubit Simulation",
+    "description": "A past project that successfully modeled the behavior of a superconducting qubit using classical simulation tools.",
+    "status": "previous",
+    "link": "https://github.com/cmu-qc/qubit-sim"
+  },
+  {
+    "id": 4,
+    "name": "Entanglement Visualization Tool",
+    "description": "A front-end project to create an interactive tool for visualizing quantum entanglement in a simple, intuitive way.",
+    "status": "previous",
+    "link": "https://github.com/cmu-qc/entanglement-vis",
+    "thumbnail": "https://placehold.co/300x200/cccccc/333333?text=Entanglement"
+  }
+]
