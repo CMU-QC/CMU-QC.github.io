@@ -89,12 +89,12 @@
   },
   {
     "id": 10,
-    "name": "Industry Talk with Vadim Karpusenko (IonQ)",
+    "name": "Industry Talk with Daiwei Zhu and Vadim Karpusenko (IonQ)",
     "startDate": "September 6, 2025",
     "endDate": "September 6, 2025",
     "time": "1:00 PM",
     "location": "TBA",
-    "description": "Join us for an exciting talk with Daiwei Zhu and Vadim Karpusenko from IonQ, one of the global leaders in quantum computing. IonQ is pushing the boundaries of what’s possible by building scalable quantum systems based on trapped-ion technology—recognized for their exceptional coherence times and high gate fidelities. From quantum hardware breakthroughs to real-world commercial applications, IonQ is at the forefront of quantum innovation. Don’t miss this opportunity to hear directly from a leader in the field and learn how IonQ is shaping the future of computation.",
+    "description": "Join us for an exciting talk with Daiwei Zhu and Vadim Karpusenko from IonQ, one of the global leaders in quantum computing. IonQ is pushing the boundaries of what’s possible by building scalable quantum systems based on trapped-ion technology—recognized for their exceptional coherence times and high gate fidelities. From quantum hardware breakthroughs to real-world commercial applications, IonQ is at the forefront of quantum innovation. Don’t miss this opportunity to hear directly from leaders in the field and learn how IonQ is shaping the future of computation.",
     "link": null,
     "thumbnail": "img/events_pics/IonQ.jpg"
   },
