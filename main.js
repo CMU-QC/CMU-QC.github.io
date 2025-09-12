@@ -21,6 +21,9 @@ createApp({
 
     // Navigation
     const currentPage = ref("home"); // 'home', 'events', etc.
+    // Qiskit Banner
+    const qiskitBannerVisible = ref(true); // New variable to control banner visibility
+    const qiskitEventData = ref(null);
 
     // Events
     const upcomingEvents = ref([]);
@@ -33,6 +36,21 @@ createApp({
         ? upcomingEvents.value
         : pastEvents.value;
     });
+
+    // Load Qiskit Fall Fest page data
+    const loadQiskitEvent = async () => {
+      try {
+        const response = await fetch("data/qiskit.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        qiskitEventData.value = data;
+      } catch (error) {
+        console.error("Error loading Qiskit event data:", error);
+        qiskitEventData.value = null;
+      }
+    };
 
     // Load events
     // Function to load and sort events from JSON
@@ -187,10 +205,12 @@ createApp({
 
       // Navigation
       currentPage,
+      qiskitBannerVisible,
 
       // Events
       currentEventType,
       filteredEvents,
+      qiskitEventData,
 
       // Projects
       currentProjectType,

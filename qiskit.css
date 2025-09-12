@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;600&display=swap");
+
+:root {
+  --qiskit-purple: #551a8b;
+  --qiskit-pink: #c93b76;
+  --qiskit-blue: #3f51b5;
+  --text-color: #333;
+  --bg-light: #f7f7f7;
+  --bg-dark: #2c2c2c;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+}
+
+/* Qiskit Banner Styling */
+.qiskit-banner {
+  background: linear-gradient(
+    to right,
+    var(--qiskit-blue),
+    var(--qiskit-pink),
+    var(--qiskit-purple)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  font-family: "IBM Plex Sans";
+  font-weight: 300;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-shadow: var(--shadow-md);
+  animation: slideDown 0.5s ease-out;
+  transform: translateY(0);
+}
+
+.qiskit-banner p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.qiskit-banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.qiskit-banner a:hover {
+  color: #c0c0c0;
+}
+
+/* Qiskit Page-specific Content Styling */
+.qiskit-page {
+  font-family: "IBM Plex Sans";
+  font-weight: 200;
+  color: #fff;
+}
+
+.qiskit-page.content-section {
+  padding: 40px 20px;
+  background: radial-gradient(
+    ellipse at top,
+    var(--qiskit-pink),
+    var(--qiskit-purple),
+    var(--qiskit-blue)
+  );
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.qiskit-page h2 {
+  font-family: "IBM Plex Sans";
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.qiskit-page h3 {
+  font-family: "IBM Plex Sans";
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.qiskit-page p,
+.qiskit-page ul {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.qiskit-page .button {
+  font-size: xx-large;
+  text-align: center;
+  background-color: var(--qiskit-blue);
+  display: block;
+  justify-self: center;
+  color: #fff;
+  padding: 60px;
+  width: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.qiskit-page .button:hover {
+  background-color: #3b0e5d;
+  transform: translateY(-2px);
+}
+
+/* Illustration-specific styles to make images "mingle" with text */
+.illustration-right {
+  float: right;
+  width: 250px;
+  height: auto;
+  margin: 0 0 1rem 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+.illustration-top {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.illustration-left {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin: 0 1rem 1rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+/* To clear the float after a section of text */
+.qiskit-page p::after {
+  content: "";
+  display: table;
+  clear: both;
+}

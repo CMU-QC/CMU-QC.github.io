@@ -16,6 +16,7 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="qiskit.css" />
   </head>
   <body>
     <div id="app">
@@ -45,6 +46,7 @@
                 >Educational</a
               >
             </li>
+
             <li>
               <a href="#" @click.prevent="currentPage = 'contact'">Contact</a>
             </li>
@@ -54,6 +56,90 @@
 
       <div class="content-wrapper">
         <main :class="{'has-background': currentPage !== 'home'}">
+          <div class="qiskit-banner" v-if="currentPage !== 'qiskit'">
+            <div class="container">
+              <p>
+                📢 **Join us for the CMU x IBM Qiskit Fall Fest!**
+                <a href="#" @click.prevent="currentPage = 'qiskit'"
+                  >Learn More & Register Here!</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Qiskit Fall Fest Page -->
+          <section
+            v-if="currentPage === 'qiskit'"
+            class="content-section qiskit-page"
+          >
+            <img
+              src="img/qiskit_pics/Simplified_Illustration.png"
+              alt="Illustration celebrating IBM qiskit"
+              class="qiskit-page illustration-top"
+            />
+            <h2>CMU x IBM Qiskit Fall Fest</h2>
+            <p>
+              <img
+                src="img/qiskit_pics/Crop_Schrodinger.png"
+                alt="Illustration of Erwin Schrödinger"
+                class="illustration-left"
+              />
+              Qiskit Fall Fest is returning for its fifth annual installment to
+              once again bring the quantum community together for a global
+              celebration of quantum technology, research, and collaboration.
+              Qiskit Fall Fest is a collection of quantum computing events that
+              allows students, researchers and industry professionals to
+              participate in various quantum-themed activities — including
+              quantum challenges, hackathons, coding competitions, workshops,
+              social events, and more. Each year, IBM® partners with a select
+              group of university students and other volunteer hosts to help
+              them plan and run the global roster of Fall Fest events.
+            </p>
+
+            <h3>Event Highlights and Core Concepts</h3>
+            <p>
+              <img
+                src="img/qiskit_pics/Crop_Einstein.png"
+                alt="Illustration of Albert Einstein"
+                class="illustration-right"
+              />
+              The festival is packed with workshops that dive into quantum
+              circuits and algorithms. You'll gain hands-on experience using the
+              Qiskit framework to build and run your first quantum programs. Our
+              sessions are led by experienced instructors who will guide you
+              through complex topics like quantum superposition and entanglement
+              in a clear and intuitive way.
+            </p>
+
+            <p>
+              <img
+                src="img/qiskit_pics/Crop_Heisenbergpng.png"
+                alt="Illustration of Heisenberg"
+                class="illustration-left"
+              />
+              In addition to the practical workshops, we'll host guest lectures
+              from leading researchers and industry professionals. These talks
+              will cover a wide range of topics, from the theoretical
+              foundations of quantum mechanics to the latest developments in
+              quantum technology. This is your chance to hear firsthand about
+              the future of computing and its potential impact on various
+              industries.
+            </p>
+
+            <h3>Registration</h3>
+            <p>
+              Don't miss out on this incredible learning opportunity. Register
+              now to secure your spot!
+            </p>
+            <a
+              href="YOUR_REGISTRATION_LINK_HERE"
+              target="_blank"
+              class="button"
+            >
+              <i class="fas fa-ticket-alt"></i> Register Now!
+            </a>
+          </section>
+
           <!-- Hero Section -->
           <section class="hero-section" v-if="currentPage === 'home'">
             <img
@@ -161,8 +247,8 @@
               No {{ currentEventType }} events at the moment. Please check back
               soon!
             </p>
-            <p>
-              Check out our past event materials and projects on
+            <p style="text-align: center">
+              Check out our past event materials and projects on <br />
               <a
                 :href="contact.socialMedia.github"
                 target="_blank"
@@ -383,11 +469,14 @@
                   :href="contact.socialMedia.discord"
                   target="_blank"
                   class="social-link discord"
-                  ><i class="fab fa-discord"></i> Discord (Important for most up-to-date information!)</a
+                  ><i class="fab fa-discord"></i> Discord (Important for most
+                  up-to-date information!)</a
                 >
               </li>
             </ul>
-            <p>Ready to get involved? Joining our mailing list to stay updated!</p>
+            <p>
+              Ready to get involved? Joining our mailing list to stay updated!
+            </p>
             <a :href="joinUsLink" target="_blank" class="button">
               <i class="fas fa-user-plus"></i> Join CMU QC
             </a>
