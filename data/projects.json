@@ -1,32 +1,18 @@
 [
   {
     "id": 1,
-    "name": "Quantum Machine Learning",
-    "description": "A project focused on applying quantum algorithms to machine learning tasks, exploring the potential for speedup and new computational paradigms.",
-    "status": "current",
-    "link": "https://example.com/qml-apply",
-    "thumbnail": "https://placehold.co/300x200/cccccc/333333?text=QML"
+    "name": "Early Fault-Tolerant Quantum Algorithms for Matrix Functions via Trotter Extrapolation",
+    "description": "During a SURF at Caltech with John Preskill and Samson Wang, we developed algorithms using product formulae and Richardson extrapolation to boost accuracy and cut circuit depth for quantum phase estimation and Green’s functions. We also made a partially randomized version that works great for Hamiltonians with big dominant terms, like in quantum chemistry. Our methods need just one ancilla qubit, have low circuit depth, and are ideal for early fault-tolerant quantum devices.",
+    "status": "previous",
+    "link": "https://arulrhikm.github.io/media/documents/SURF_final_report.pdf",
+    "thumbnail": "img/project_pics/richardson-trotter-scaling.png"
   },
   {
     "id": 2,
-    "name": "Quantum Communication Networks",
-    "description": "Building a simulation of a quantum network to understand the challenges and opportunities of secure quantum communication.",
-    "status": "current",
-    "link": "https://example.com/qcn-apply"
-  },
-  {
-    "id": 3,
-    "name": "Superconducting Qubit Simulation",
-    "description": "A past project that successfully modeled the behavior of a superconducting qubit using classical simulation tools.",
+    "name": "Five Starter Problems: Solving Quadratic Unconstrained Binary Optimization models on Quantum Computers",
+    "description": "This tutorial, done with the CMU Quantum Technologies Group and published in the 2025 Tutorials in Operations Research, gives a hands-on intro to solving QUBO problems on IBM’s gate-based and D-Wave’s annealer quantum machines. We cover basics, key concepts, two heuristics, and practical examples, with code available on GitHub. It’s perfect for students and pros starting to explore real-world quantum computing.",
     "status": "previous",
-    "link": "https://github.com/cmu-qc/qubit-sim"
-  },
-  {
-    "id": 4,
-    "name": "Entanglement Visualization Tool",
-    "description": "A front-end project to create an interactive tool for visualizing quantum entanglement in a simple, intuitive way.",
-    "status": "previous",
-    "link": "https://github.com/cmu-qc/entanglement-vis",
-    "thumbnail": "https://placehold.co/300x200/cccccc/333333?text=Entanglement"
+    "link": "https://www.cmu.edu/tepper/faculty-and-research/research/assets/2401.08989v3qubboonqc.pdf",
+    "thumbnail": "img/project_pics/rastrigin-optimization.png"
   }
 ]
